@@ -3,7 +3,6 @@ package net.mybluemix.servlet;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,10 +22,9 @@ public class SimpleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         response.getWriter().print("Hello Liora");
-        ServletOutputStream out = response.getOutputStream();
-        out.println("my text in the first line");
-        out.println("my text in the second line");
-        out.close();
+        response.getWriter().println("<br>LMB");
+        response.getWriter().println("<br>Sookka");
+        response.getWriter().println("<br>JustOnTime");
     }
 
 }

@@ -23,12 +23,10 @@ public class SimpleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         response.getWriter().print("Hello Liora");
-        /*
         ServletOutputStream out = response.getOutputStream();
         out.println("my text in the first line");
         out.println("my text in the second line");
         out.close();
-        */
     }
 
 }
